@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularze</title>
+    <link rel="stylesheet" href="sranie.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran&family=PT+Sans+Caption&display=swap" rel="stylesheet">
+    <script>
+        function check(test)
+        {
+            if(test.checked){
+                document.getElementById("dis").disabled=false;
+            } else {
+                document.getElementById("dis").disabled=true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="border">
+        <form action="" method="post">
+            <h4>ULTRA TEST</h4>
+            <div class="sranie">
+                <input type="text" id="tekst" name="imie" required>
+                <label>Imię i nazwisko</label>
+            </div>
+            <fieldset>
+                <legend>Chuje</legend>
+                <br><p>Zaznacz znanych chujów:</p>
+                <label class="con">Szper 
+                    <input type="checkbox" name="chuj1" checked>
+                    <span class="checkmark"></span>
+                </label><br>
+                <label class="con">Kangurek Kao 
+                    <input type="checkbox" name="chuj2">
+                    <span class="checkmark"></span>
+                </label><br>
+                <label class="con">Koziołek Matołek 
+                    <input type="checkbox" name="chuj3">
+                    <span class="checkmark"></span>
+                </label>
+                <p><br>Wybierz ulubionego chuja:</p>
+                <div class="select">
+                    <select>
+                        <option>Szper</option>
+                        <option>Kangurek Kao</option>
+                        <option>Koziołek Matołek</option>
+                    </select>
+                </div><br>
+                <p>Kraj największej chujni:</p>
+                <label class="con">Polska
+                    <input type="radio" name="country">
+                    <span class="radio"></span>
+                </label>
+                <label class="con">Niemcy
+                    <input type="radio" name="country">
+                    <span class="radio"></span>
+                </label>
+                <label class="con">Rosja
+                    <input type="radio" name="country">
+                    <span class="radio"></span>
+                </label>
+                <p><br>Skala chujni (1-10)</p>
+                <input type="range" class="suwak" name="suwak" min="1" max="10" step="1" list="lista"><br><br>
+                <datalist id="lista">
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                    <option value="5"></option>
+                    <option value="6"></option>
+                    <option value="7"></option>
+                    <option value="8"></option>
+                    <option value="9"></option>
+                    <option value="10"></option>
+                </datalist>
+                <label class="con">Ja także jestem chujem
+                    <input type="checkbox" name="chuj4" onclick="check(this)"> 
+                    <span class="checkmark"></span>
+                </label><br><br>
+            </fieldset> 
+            <button type="submit" id="dis" disabled>Wyślij</button>
+            <button type="reset">Wyczyść</button>
+        </form>
+    </div>
+</body>
+</html>
